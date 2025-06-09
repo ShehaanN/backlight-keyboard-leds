@@ -1,0 +1,9 @@
+[Unit]
+Description=Keyboard Backlight LED Control Service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/nice -n 19 /opt/backlight-keyboard-leds/keyboard_leds.sh /sys/class/leds/ 0.2
+
+[Install]
+WantedBy=multi-user.target
